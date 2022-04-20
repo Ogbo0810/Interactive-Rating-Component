@@ -1,0 +1,350 @@
+/* *****************************************
+Table of Contents
+
+**- Root Styling
+** - Body Area
+** - Rating Box Area
+** - Thank You Area 
+** - Attribtion Area
+***************************************** */
+
+@import url("https://fonts.google.com/specimen/Overpass");
+:root {
+    --main-color: hsl(25, 97%, 53%);
+    /* #fb7413 */
+    --white: hsl(0, 0%, 100%);
+    /* #ffffff */
+    --light-grey: hsl(217, 12%, 63%);
+    /* #959eac */
+    --medium-grey: hsl(216, 12%, 54%);
+    /* #7c8798 */
+    --dark-blue: hsl(213, 19%, 18%);
+    /* #252d37 */
+    --very-dark-blue: hsl(216, 12%, 8%);
+    /* #121417 */
+    --main-font-family: "Overpass";
+    --p-font-size: 15px;
+    --font-weight-1: 400;
+    --font-weight-2: 700;
+}
+
+
+/*=============================================
+Body Area
+=============================================*/
+
+body {
+    background-color: black;
+    /* width: 1440px; */
+}
+
+
+/*=============================================
+Ratings Box Area
+=============================================*/
+
+.rating-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5%;
+    padding: 16px;
+    margin: 7% 40% auto 40%; 
+    width: 20%;
+    background-color: var(--very-dark-blue);
+}
+
+.rating-box .star {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-blue);
+    margin: 2px 0 10px 0px;
+    width: 12px;
+    height: 13px;
+    padding: 8px;
+    border-radius: 50%;   
+    text-align: center; 
+}
+
+.rating-box .star img{
+width: auto;
+}
+
+.rating-box .heading {
+    cursor: default;
+    color: var(--white);
+    margin: 8px 0 11px 0;
+    font-size: 24px;
+    font-weight: var(--font-weight-2)
+}
+
+.rating-box .paragraph {
+    cursor: default;
+    color: var(--light-grey);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-1);
+    margin: 2px 0 20px 0;
+}
+
+.rating-box .rating-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0 20px 0;
+}
+
+.rating-box .rating-list .rating-number{
+background-color: var(--dark-blue);
+color: var(--light-grey);
+font-size: var(--p-font-size);
+text-align: center;
+border-radius: 50%;
+padding: 4% 6% 4% 6%;
+}
+
+.rating-box .rating-list .rating-number:hover{
+    background-color: var(--main-color);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.rating-box .rating-list .rating-number:active{
+    background-color: var(--light-grey);
+    color: var(--white);
+}
+
+.rating-box .rating-list .rating-number:focus{ 
+    background-color: var(--light-grey);
+    color: var(--white);
+}/* focus is the state after which an object has been clicked */
+
+.rating-box .submit-btn{
+    text-decoration: none ; 
+    background-color: var(--main-color);
+    border-radius: 15px;
+    width: 100%;
+    height: 25px;
+    color: var(--white);
+    text-align: center;
+    align-items: center;
+    margin: 2px 0 10px 0;
+    padding-top: 1.8%;
+    font-family: var(--main-font-family);
+}
+
+.rating-box .submit-btn:hover{
+    background-color: var(--white);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+
+
+/*=============================================
+Thank You Area
+=============================================*/
+.response{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    padding: 20px;
+    margin: 7% 39.25% auto 39.25%; 
+    width: 21.5%;
+    background-color: var(--very-dark-blue);
+    cursor: default;
+}
+
+.response .response-image{
+    margin: 30px 0 20px 0;
+}
+
+.response .user-rating{
+background-color: var(--dark-blue);
+color: var(--main-color);
+font-size: var(--p-font-size);
+padding: 3px 15px 3px 15px;
+margin: 0 0 30px 0;
+border-radius: 15px;
+}
+
+.response .thank-you{
+color: var(--white);
+font-size: 28px;
+margin: 0 0 10px 0;
+}
+
+.response .message{
+color: var(--medium-grey);
+text-align: center;
+margin: 0 0 20px 0;
+font-size: var(--p-font-size);
+}
+
+/*=============================================
+Attribution Area
+=============================================*/
+
+.attribution {
+    font-size: var(--p-font-size);
+    color: var(--white);
+    margin-top: 110px;
+    text-align: center;
+    cursor: default;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+
+/*=============================================
+Mobile Devices (Max Width: 600)
+=============================================*/
+@media only screen and (max-width: 600px) {
+
+    .rating-box{
+       width: 70%;
+       padding: 24px;
+       margin: 37% 5% auto 10%;
+   }   
+   
+   .rating-box .star {
+       margin: 10px 0 18px 0px;
+       width: 20px;
+       height: 21px;
+       padding: 16px;  
+   }
+   
+   .rating-box .heading {
+       font-size: 32px;
+       margin: 16px 0 19px 0;
+   }
+   
+   .rating-box .paragraph{
+   font-size: 23px;
+   margin: 10px 0 28px 0;
+   }
+   
+   .rating-box .rating-list {
+       margin: 10px 0 28px 0;
+   }
+   
+   .rating-box .rating-list .rating-number{
+       font-size: 23px;
+       /* padding: 4% 6% 4% 6%; */
+       padding: 5% 7% 5% 7%;
+   }
+   
+   .rating-box .submit-btn{
+       border-radius: 32px;
+       height: 33px;
+       margin: 10px 0 18px 0;
+       font-size: 23px;
+       padding: 18px 0 18px 0;
+   }
+   
+   .response{
+       padding: 28px;
+       margin: 60% 4.25% auto 9.25%; 
+       width: 71.5%;
+   }
+   
+   .response .response-image{
+       margin: 30px 0 28px 0;
+   }
+   
+   .response .user-rating{
+   font-size:23px;
+   padding: 11px 23px 11px 23px;
+   margin: 0 0 38px 0;
+   border-radius: 23px;
+   }
+   
+   .response .thank-you{
+   font-size: 36px;
+   margin: 0 0 18px 0;
+   }
+   
+   .response .message{
+   margin: 0 0 20px 0;
+   font-size: 23px;
+   }
+   
+   }
+   
+   
+   /*=============================================
+   Mobile Devices (Max Width: 375)
+   =============================================*/
+   @media only screen and (max-width: 376px) {
+   
+       .rating-box{
+          width: 75%;
+          padding: 24px;
+          margin: 60% 15% auto 6%;
+      }   
+      
+      .rating-box .star {
+          margin: 10px 0 18px 0px;
+          width: 20px;
+          height: 21px;
+          padding: 16px;  
+      }
+      
+      .rating-box .heading {
+          font-size: 32px;
+          margin: 16px 0 19px 0;
+      }
+      
+      .rating-box .paragraph{
+      font-size: 20px;
+      margin: 8px 0 26px 0;
+      }
+      
+      .rating-box .rating-list {
+          margin: 8px 0 26px 0;
+      }
+      
+      .rating-box .rating-list .rating-number{
+          font-size: 21px;
+          /* padding: 4% 6% 4% 6%; */
+          padding: 4.5% 6.5% 4.5% 6.5%;
+      }
+      
+      .rating-box .submit-btn{
+          border-radius: 32px;
+          height: 33px;
+          margin: 10px 0 18px 0;
+          font-size: 20px;
+          padding: 12px 0 9px 0;
+      }
+      
+      .response{
+          padding: 28px;
+          margin: 60% 4.25% auto 9.25%; 
+          width: 71.5%;
+      }
+      
+      .response .response-image{
+          margin: 30px 0 28px 0;
+      }
+      
+      .response .user-rating{
+      font-size:20px;
+      padding: 11px 23px 11px 23px;
+      margin: 0 0 30px 0;
+      border-radius: 23px;
+      }
+      
+      .response .thank-you{
+      font-size: 34px;
+      margin: 0 0 16px 0;
+      }
+      
+      .response .message{
+      margin: 0 0 20px 0;
+      font-size: 18px;
+      }
+      }
